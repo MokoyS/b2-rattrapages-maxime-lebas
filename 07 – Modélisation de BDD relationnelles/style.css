@@ -1,0 +1,111 @@
+.status-gris { color: rgb(121, 121, 121); font-weight: bold; }
+.status-bleu { color: rgb(85, 85, 255); font-weight: bold; }
+.status-vert { color: rgb(0, 164, 0); font-weight: bold; }
+.status-rouge { color: rgb(255, 0, 0); font-weight: bold; }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "outfit", sans-serif;
+}
+
+body {
+    background-color: #fffcf0;
+}
+
+h2 {
+    color: rgb(190, 190, 0);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+    padding: 75px 75px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    padding: 30px 80px;
+}
+
+.new {
+    position: absolute;
+    top: 75px;
+    right: 75px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    height: 50px;
+    padding: 25px;
+    border: 1px solid #000;
+}
+
+td {
+    height: 50px;
+    padding: 25px;
+    border: 1px solid #000;
+    text-align: center;
+    min-width: 120px;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    margin: 15px;
+    cursor: pointer;
+    transform: rotate(0);
+    transition: all 0.5s ease-in-out;
+
+}
+
+button:hover {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(350deg);
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    max-width: 130px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 200px;
+}
+
+.logo {
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    height: 30px;
+}
+
