@@ -1,0 +1,67 @@
+.salade {
+    width: 380px;
+    box-sizing: border-box;
+}
+
+.ingredients {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+   width: auto;
+   display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    flex-direction: column;
+    background-color: #ffee994f;
+    border: 1px solid #000;
+    border-radius: 10px;
+
+    
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}
+.card.clicked img {
+    animation: flyToSalad 1.5s ease-in-out forwards;
+    z-index: 1000;
+}
+
+@keyframes flyToSalad {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(var(--target-x)) translateY(var(--target-y)) scale(0.8) rotate(180deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(var(--target-x)) translateY(var(--target-y)) scale(0.3) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.card.used {
+    opacity: 0.5;
+    pointer-events: none;
+    transform: scale(0.9);
+}
+.salade.shake {
+    animation: saladeShake 0.5s ease-in-out;
+}
+
+@keyframes saladeShake {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.05) rotate(2deg); }
+    50% { transform: scale(1.1) rotate(-2deg); }
+    75% { transform: scale(1.05) rotate(1deg); }
+}

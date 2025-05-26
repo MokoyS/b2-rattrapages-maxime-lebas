@@ -1,0 +1,52 @@
+.header a {
+  text-decoration: none;
+  transition: 0.4s;
+  position: relative;
+}
+
+.header a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: rgb(190, 190, 0);
+  bottom: -4px;
+  left: 0;
+  transition: width 0.4s;
+}
+
+.header a:hover::before {
+  width: 100%;
+}
+
+.header a:hover {
+  color: rgb(190, 190, 0);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    padding: 75px;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+    font-weight: bold;
+    line-height: 0px;
+}
+
+.nav-menu {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo {
+  height: 40px;
+  width: auto;
+  margin-right: 25px;
+}
