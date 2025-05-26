@@ -91,7 +91,6 @@ h1 {
     }
 }
 
-/* Effet de brillance sur les cartes */
 .card::before {
     content: '';
     position: absolute;
