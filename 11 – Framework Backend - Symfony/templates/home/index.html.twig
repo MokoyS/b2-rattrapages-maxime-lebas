@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion Restaurant{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1 class="mb-4">Gestion Restaurant</h1>
+    
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card text-black" style="background-color: fff;">
+                <div class="card-body">
+                    <h5 class="card-title">Restaurants</h5>
+                    <p class="card-text display-6">{{ restaurant_count }}</p>
+                    <a href="{{ path('app_restaurant_index') }}" class="btn btn-light">Voir tous</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card text-black" style="background-color: fff;">
+                <div class="card-body">
+                    <h5 class="card-title">Employés</h5>
+                    <p class="card-text display-6">{{ employee_count }}</p>
+                    <a href="{{ path('app_employee_index') }}" class="btn btn-light">Voir tous</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Actions rapides</h2>
+            <div class="gap">
+                <a href="{{ path('app_restaurant_new') }}" class="btn" style="background-color: #B8C11C;" >Nouveau Restaurant <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg></a>
+                <a href="{{ path('app_employee_new') }}" class="btn" style="background-color: #3C98A9;"> Nouvel Employé <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
